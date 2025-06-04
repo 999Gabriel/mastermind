@@ -1,0 +1,572 @@
+/* src/main/resources/swp/com/mastermind/modern-styles.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Chakra+Petch:wght@400;700&display=swap');
+
+/* Root and global styles */
+.root {
+    -fx-background-color: #1a1b26;
+    -fx-background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAFElEQVR42mNkYGD4z4AHMI6aQQoAAEdaAhRQwpjKAAAAAElFTkSuQmCC');
+    -fx-background-repeat: repeat;
+    -fx-font-family: 'Chakra Petch', monospace;
+    -fx-background-radius: 0;
+}
+
+/* Typography styling */
+.label {
+    -fx-text-fill: #acb0d0;
+    -fx-font-size: 14px;
+    -fx-font-family: 'Chakra Petch', monospace;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.3), 1, 0, 0, 1);
+}
+
+.title {
+    -fx-font-family: 'Press Start 2P', cursive;
+    -fx-font-size: 32px;
+    -fx-text-fill: #ff79c6;
+    -fx-effect: dropshadow(three-pass-box, #bd93f9, 10, 0.7, 0, 0);
+    -fx-padding: 20 0 20 0;
+    -fx-letter-spacing: 3px;
+    -fx-alignment: center;
+    -fx-background-color: #1a1b26;
+    -fx-border-color: #ff79c6;
+    -fx-border-width: 3px;
+    -fx-border-style: solid none solid none;
+    -fx-padding: 20px;
+}
+
+/* Button styling with retro look */
+.button {
+    -fx-background-color: #44475a;
+    -fx-text-fill: #f8f8f2;
+    -fx-font-family: 'VT323', monospace;
+    -fx-font-size: 18px;
+    -fx-padding: 8 16 8 16;
+    -fx-border-color: #bd93f9;
+    -fx-border-width: 2px;
+    -fx-border-style: solid;
+    -fx-cursor: hand;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+}
+
+.button:hover {
+    -fx-background-color: #6272a4;
+    -fx-text-fill: #f8f8f2;
+    -fx-effect: dropshadow(three-pass-box, #bd93f9, 10, 0, 0, 0);
+}
+
+.button:pressed {
+    -fx-background-color: #bd93f9;
+    -fx-text-fill: #282a36;
+    -fx-translate-y: 2px;
+    -fx-translate-x: 2px;
+    -fx-effect: none;
+}
+
+/* Game board with pixel-art styling */
+.game-board {
+    -fx-background-color: #282a36;
+    -fx-padding: 20px;
+    -fx-border-width: 4px;
+    -fx-border-color: #bd93f9;
+    -fx-border-style: solid;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+    -fx-effect: innershadow(gaussian, rgba(189,147,249,0.2), 10, 1, 0, 0);
+    -fx-min-width: 500px;
+    -fx-min-height: 400px;
+}
+
+/* Color pegs with pixel-art effect */
+.color-peg {
+    -fx-background-radius: 0;
+    -fx-min-width: 40px;
+    -fx-min-height: 40px;
+    -fx-border-width: 2px;
+    -fx-border-color: #f8f8f2;
+    -fx-border-radius: 0;
+}
+
+.color-peg:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(255,255,255,0.8), 10, 0, 0, 0);
+    -fx-cursor: hand;
+    -fx-translate-y: -2px;
+}
+
+/* Color peg specific colors with retro style */
+.color-peg-red {
+    -fx-background-color: #ff5555;
+}
+
+.color-peg-green {
+    -fx-background-color: #50fa7b;
+}
+
+.color-peg-blue {
+    -fx-background-color: #8be9fd;
+}
+
+.color-peg-yellow {
+    -fx-background-color: #f1fa8c;
+}
+
+.color-peg-orange {
+    -fx-background-color: #ffb86c;
+}
+
+.color-peg-purple {
+    -fx-background-color: #bd93f9;
+}
+
+.color-peg-white {
+    -fx-background-color: #f8f8f2;
+}
+
+.color-peg-black {
+    -fx-background-color: #282a36;
+}
+
+/* Result pegs */
+.result-peg {
+    -fx-background-radius: 0;
+    -fx-min-width: 15px;
+    -fx-min-height: 15px;
+    -fx-border-width: 1px;
+    -fx-border-color: #f8f8f2;
+    -fx-border-radius: 0;
+}
+
+.result-peg-black {
+    -fx-background-color: #f8f8f2;
+}
+
+.result-peg-white {
+    -fx-background-color: #6272a4;
+}
+
+/* Guess row styling with retro effects */
+.guess-row {
+    -fx-padding: 8px;
+    -fx-background-color: #2c2e3e;
+    -fx-border-color: #44475a;
+    -fx-border-width: 2px;
+    -fx-border-radius: 0;
+    -fx-spacing: 10px;
+    -fx-background-radius: 0;
+}
+
+.current-row {
+    -fx-background-color: #44475a;
+    -fx-border-color: #ff79c6;
+    -fx-border-width: 2px;
+}
+
+/* Game info elements */
+.game-info {
+    -fx-background-color: #282a36;
+    -fx-padding: 10px;
+    -fx-spacing: 10px;
+    -fx-border-width: 2px;
+    -fx-border-color: #44475a;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+}
+
+/* Specific UI elements */
+#attemptCounter {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #8be9fd;
+    -fx-font-family: 'VT323', monospace;
+    -fx-letter-spacing: 1px;
+}
+
+#timerLabel {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #f1fa8c;
+    -fx-font-family: 'VT323', monospace;
+    -fx-letter-spacing: 1px;
+}
+
+#messageLabel {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ff79c6;
+    -fx-padding: 5px;
+    -fx-background-color: #282a36;
+    -fx-border-width: 2px;
+    -fx-border-color: #ff79c6;
+    -fx-font-family: 'VT323', monospace;
+    -fx-letter-spacing: 1px;
+}
+
+/* Buttons */
+#submitButton {
+    -fx-background-color: #50fa7b;
+    -fx-text-fill: #282a36;
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+    -fx-border-color: #282a36;
+    -fx-border-width: 3px;
+}
+
+#submitButton:hover {
+    -fx-background-color: #3ae868;
+    -fx-effect: dropshadow(three-pass-box, rgba(80,250,123,0.6), 10, 0, 0, 0);
+}
+
+#submitButton:pressed {
+    -fx-background-color: #2fd86a;
+    -fx-translate-y: 2px;
+    -fx-translate-x: 2px;
+}
+
+#newGameButton {
+    -fx-background-color: #ffb86c;
+    -fx-text-fill: #282a36;
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+    -fx-border-color: #282a36;
+    -fx-border-width: 3px;
+}
+
+#newGameButton:hover {
+    -fx-background-color: #ffaa50;
+    -fx-effect: dropshadow(three-pass-box, rgba(255,184,108,0.6), 10, 0, 0, 0);
+}
+
+/* Table styles for high scores */
+.table-view {
+    -fx-background-color: #282a36;
+    -fx-padding: 5px;
+    -fx-border-width: 2px;
+    -fx-border-color: #bd93f9;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #44475a;
+    -fx-background-radius: 0;
+    -fx-padding: 5px 0 5px 0;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-size: 50px;
+    -fx-border-width: 0 1px 0 0;
+    -fx-border-color: #6272a4;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #f8f8f2;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER;
+    -fx-font-family: 'VT323', monospace;
+    -fx-font-size: 18px;
+}
+
+.table-row-cell {
+    -fx-background-color: #282a36;
+    -fx-table-cell-border-color: #44475a;
+    -fx-text-fill: #f8f8f2;
+    -fx-font-family: 'VT323', monospace;
+    -fx-font-size: 16px;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #313342;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #44475a;
+    -fx-text-fill: #f8f8f2;
+}
+
+.table-view .virtual-flow .scroll-bar:vertical,
+.table-view .virtual-flow .scroll-bar:horizontal {
+    -fx-background-color: #282a36;
+}
+
+/* Text input styling with retro look */
+.text-field {
+    -fx-background-color: #282a36;
+    -fx-text-fill: #f8f8f2;
+    -fx-background-radius: 0;
+    -fx-padding: 8 10 8 10;
+    -fx-font-size: 16px;
+    -fx-border-width: 2px;
+    -fx-border-color: #6272a4;
+    -fx-border-radius: 0;
+    -fx-font-family: 'VT323', monospace;
+}
+
+.text-field:focused {
+    -fx-border-color: #bd93f9;
+}
+
+/* Dialog styling with retro theme */
+.dialog-pane {
+    -fx-background-color: #282a36;
+    -fx-padding: 20px;
+    -fx-border-width: 4px;
+    -fx-border-color: #ff79c6;
+}
+
+.dialog-pane > .button-bar > .container {
+    -fx-background-color: transparent;
+}
+
+.dialog-pane > .content.label {
+    -fx-font-size: 16px;
+    -fx-font-family: 'VT323', monospace;
+    -fx-text-fill: #f8f8f2;
+    -fx-wrap-text: true;
+}
+
+.dialog-pane .button {
+    -fx-background-color: #bd93f9;
+    -fx-text-fill: #282a36;
+    -fx-font-weight: bold;
+    -fx-border-color: #44475a;
+    -fx-border-width: 2px;
+    -fx-padding: 8 20 8 20;
+}
+
+.dialog-pane .button:hover {
+    -fx-background-color: #a775f3;
+}
+
+/* Empty slot style */
+.empty-slot {
+    -fx-background-color: #44475a;
+    -fx-background-radius: 0;
+    -fx-border-color: #6272a4;
+    -fx-border-width: 2px;
+    -fx-border-radius: 0;
+}
+
+/* Win notification with pixel animation effect */
+@keyframes pixelate {
+    0% { -fx-scale-x: 1.0; -fx-scale-y: 1.0; }
+    25% { -fx-scale-x: 1.05; -fx-scale-y: 1.05; -fx-rotate: -2; }
+    50% { -fx-scale-x: 1.0; -fx-scale-y: 1.0; }
+    75% { -fx-scale-x: 1.05; -fx-scale-y: 1.05; -fx-rotate: 2; }
+    100% { -fx-scale-x: 1.0; -fx-scale-y: 1.0; }
+}
+
+.win-animation {
+    animation: pixelate 0.8s steps(4) 3;
+}
+
+/* Footer styling */
+.footer {
+    -fx-padding: 10px;
+    -fx-font-size: 12px;
+    -fx-text-fill: #6272a4;
+    -fx-alignment: center;
+    -fx-font-family: 'VT323', monospace;
+    -fx-border-color: #44475a;
+    -fx-border-width: 2px 0 0 0;
+}
+
+/* Separator with pixel style */
+.separator {
+    -fx-background-color: #44475a;
+    -fx-background-radius: 0;
+}
+
+/* Scroll bars with retro design */
+.scroll-bar {
+    -fx-background-color: #282a36;
+    -fx-background-radius: 0;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #6272a4;
+    -fx-background-radius: 0;
+    -fx-border-color: #44475a;
+    -fx-border-width: 1px;
+}
+
+.scroll-bar .increment-button,
+.scroll-bar .decrement-button {
+    -fx-background-color: #44475a;
+    -fx-border-color: #6272a4;
+    -fx-border-width: 1px;
+    -fx-background-radius: 0;
+    -fx-padding: 3px;
+}
+
+.scroll-bar .increment-arrow,
+.scroll-bar .decrement-arrow {
+    -fx-background-color: #bd93f9;
+    -fx-shape: "M 0 0 L 4 4 L 8 0 Z";
+}
+
+/* CRT screen effect overlay */
+.crt-overlay {
+    -fx-background-color: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+    -fx-background-size: 100% 4px;
+    -fx-background-repeat: repeat;
+    -fx-opacity: 0.15;
+}
+
+/* Glowing effect for active elements */
+.glow-effect {
+    -fx-effect: dropshadow(gaussian, #ff79c6, 10, 0.5, 0, 0);
+}
+
+/* Scanline animation */
+@keyframes scanline {
+    0% { -fx-translate-y: 0%; }
+    100% { -fx-translate-y: 100%; }
+}
+
+.scanline {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+    -fx-min-height: 2px;
+    -fx-max-height: 2px;
+    -fx-min-width: 100%;
+    -fx-opacity: 0.5;
+    animation: scanline 8s linear infinite;
+}
+
+/* Pixel border effect */
+.pixel-border {
+    -fx-border-image-source: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAAFElEQVR42mNkYGD4z4AHMI6aQQoAAEdaAhRQwpjKAAAAAElFTkSuQmCC');
+    -fx-border-image-slice: 2;
+    -fx-border-image-width: 2;
+    -fx-border-image-repeat: repeat;
+    -fx-border-width: 4px;
+}
+
+/* Arcade cabinet effect for main container */
+.arcade-cabinet {
+    -fx-background-color: #282a36;
+    -fx-border-color: linear-gradient(to bottom, #ff79c6, #bd93f9);
+    -fx-border-width: 8px;
+    -fx-border-radius: 0;
+    -fx-padding: 20px;
+    -fx-effect: innershadow(gaussian, rgba(0,0,0,0.5), 15, 0, 0, 0);
+}
+
+/* Flicker animation for neon elements */
+@keyframes neon-flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { -fx-opacity: 1; }
+    20%, 24%, 55% { -fx-opacity: 0.7; }
+}
+
+.neon-text {
+    -fx-text-fill: #ff79c6;
+    -fx-effect: dropshadow(gaussian, #ff79c6, 10, 0.8, 0, 0);
+    animation: neon-flicker 3s infinite;
+}
+
+/* 8-bit style checkbox */
+.check-box {
+    -fx-font-family: 'VT323', monospace;
+    -fx-text-fill: #f8f8f2;
+}
+
+.check-box .box {
+    -fx-background-color: #282a36;
+    -fx-border-color: #bd93f9;
+    -fx-border-width: 2px;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+}
+
+.check-box:selected .mark {
+    -fx-background-color: #50fa7b;
+    -fx-shape: "M 5 10 L 9 15 L 15 5";
+}
+
+/* Progress bar with retro style */
+.progress-bar {
+    -fx-background-color: #282a36;
+    -fx-border-color: #44475a;
+    -fx-border-width: 2px;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+}
+
+.progress-bar .bar {
+    -fx-background-color: #ff79c6;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-padding: 0.25em;
+}
+
+.progress-bar .track {
+    -fx-background-color: #282a36;
+    -fx-background-radius: 0;
+}
+
+/* Radio button with pixel style */
+.radio-button {
+    -fx-font-family: 'VT323', monospace;
+    -fx-text-fill: #f8f8f2;
+}
+
+.radio-button .radio {
+    -fx-background-color: #282a36;
+    -fx-border-color: #bd93f9;
+    -fx-border-width: 2px;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+}
+
+.radio-button:selected .dot {
+    -fx-background-color: #50fa7b;
+    -fx-background-radius: 0;
+    -fx-padding: 3px;
+}
+
+/* Menu with retro arcade style */
+.menu-bar {
+    -fx-background-color: #44475a;
+    -fx-border-color: #bd93f9;
+    -fx-border-width: 0 0 2px 0;
+}
+
+.menu {
+    -fx-font-family: 'VT323', monospace;
+    -fx-text-fill: #f8f8f2;
+    -fx-background-color: transparent;
+    -fx-padding: 5px 10px 5px 10px;
+}
+
+.menu:hover {
+    -fx-background-color: #6272a4;
+}
+
+.menu-item {
+    -fx-background-color: #282a36;
+    -fx-text-fill: #f8f8f2;
+}
+
+.menu-item:hover {
+    -fx-background-color: #44475a;
+}
+
+.context-menu {
+    -fx-background-color: #282a36;
+    -fx-border-color: #bd93f9;
+    -fx-border-width: 2px;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+}
+
+/* Tooltip with retro style */
+.tooltip {
+    -fx-background-color: #282a36;
+    -fx-text-fill: #f8f8f2;
+    -fx-border-color: #bd93f9;
+    -fx-border-width: 2px;
+    -fx-font-family: 'VT323', monospace;
+    -fx-font-size: 14px;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+}

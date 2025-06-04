@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="swp.com.mastermind.MastermindController"
+            prefHeight="600.0" prefWidth="800.0">
+    <top>
+        <VBox alignment="CENTER" spacing="10">
+            <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+            <Label text="MASTERMIND" styleClass="title"/>
+            <HBox alignment="CENTER" spacing="15">
+                <Button fx:id="newGameButton" text="New Game" onAction="#startNewGame"/>
+                <Button text="Show High Scores" onAction="#showHighScoresAction"/>
+            </HBox>
+        </VBox>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER" spacing="20">
+            <!-- Game Board Area -->
+            <BorderPane styleClass="game-board">
+                <top>
+                    <HBox fx:id="colorSelector" alignment="CENTER" spacing="10">
+                        <!-- Color selector will be populated programmatically -->
+                    </HBox>
+                </top>
+                <center>
+                    <GridPane fx:id="guessGrid" alignment="CENTER" vgap="5" hgap="10">
+                        <!-- Guess rows will be populated programmatically -->
+                    </GridPane>
+                </center>
+                <bottom>
+                    <HBox alignment="CENTER" spacing="10">
+                        <Button fx:id="submitButton" text="Submit Guess" onAction="#submitGuess"/>
+                        <Label fx:id="messageLabel" text="Make your guess!"/>
+                    </HBox>
+                </bottom>
+            </BorderPane>
+
+            <HBox alignment="CENTER" spacing="20">
+                <Label fx:id="attemptCounter" text="Attempts: 0/12"/>
+                <Label fx:id="timerLabel" text="Time: 00:00"/>
+                <HBox fx:id="currentGuess" alignment="CENTER" spacing="10">
+                    <!-- Current guess will be populated programmatically -->
+                </HBox>
+            </HBox>
+        </VBox>
+    </center>
+
+    <bottom>
+        <HBox alignment="CENTER" spacing="10">
+            <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+            <Label text="© 2025 Mastermind Game"/>
+            <Button text="Exit" onAction="#exitGame"/>
+        </HBox>
+    </bottom>
+</BorderPane>
